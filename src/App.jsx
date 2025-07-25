@@ -26,7 +26,7 @@ export default function App() {
         <Navbar toggleTheme={toggleTheme} theme={theme} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} /> {/* ✅ Added About route */}
+          <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/contact" element={<Contact />} />
