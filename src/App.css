@@ -1,0 +1,40 @@
+/* Theme Variables */
+body.dark {
+  --background: #1a202c;
+  --text-color: #f9fafb;
+  --navbar-bg: #111827;
+  --nav-text: #d1d5db;
+  --nav-hover-bg: #1f2937;
+  --nav-hover-text: #3b82f6;
+}
+
+body.light {
+  --background: #f9fafb;
+  --text-color: #1f2937;
+  --navbar-bg: #ffffff;
+  --nav-text: #1f2937;
+  --nav-hover-bg: #e5e7eb;
+  --nav-hover-text: #2563eb;
+}
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--background);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Optional wrapper class */
+.main-content {
+  text-align: center;
+  padding-top: 3rem;
+}

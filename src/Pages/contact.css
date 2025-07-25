@@ -1,0 +1,82 @@
+/* Contact.css */
+
+.contact-container {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background-color: var(--background);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  background-color: var(--navbar-bg);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: var(--input-bg, #f0f0f0); /* fallback */
+  color: var(--text-color);
+  border: 1px solid var(--border-color, #ccc);
+  border-radius: 0.5rem;
+  resize: none;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--nav-hover-text);
+}
+
+.contact-form button {
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: var(--nav-hover-text);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0052cc; /* hover fallback */
+}
+
+.status-message {
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--nav-hover-text);
+}
+
+/* Optional: Responsive */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 1.5rem 1rem;
+  }
+
+  .contact-heading {
+    font-size: 2rem;
+  }
+}
