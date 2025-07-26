@@ -1,16 +1,27 @@
-/* About.css */
 :root {
-  --background: #ffffff;
+  --background: #f9fafb;
   --text-color: #1a202c;
   --navbar-bg: #f3f4f6;
   --nav-hover-text: #4f46e5;
+  --accent-color: #0088ff;
+  --entry-bg: rgba(0, 0, 0, 0.03);
 }
 
 [data-theme='dark'] {
-  --background: #1a202c;
-  --text-color: #ffffff;
-  --navbar-bg: #2d3748;
+  --background: #0f172a;
+  --text-color: #f1f5f9;
+  --navbar-bg: #1e293b;
   --nav-hover-text: #60a5fa;
+  --accent-color: #6a01fd;
+  --entry-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* Global styles */
+body {
+  background-color: var(--background);
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .about-container {
@@ -18,7 +29,6 @@
   padding: 2rem;
   background-color: var(--background);
   color: var(--text-color);
-  font-family: 'Segoe UI', sans-serif;
 }
 
 .about-heading {
@@ -26,16 +36,74 @@
   text-align: center;
   font-weight: bold;
   margin-bottom: 2rem;
+  color: var(--nav-hover-text);
+  position: relative;
 }
 
-.about-content {
-  max-width: 800px;
-  margin: auto;
+.about-heading::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent-color);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.about-section {
+  border: 1px solid var(--accent-color);
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  color: var(--text-color);
+}
+
+.about-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(191, 93, 233, 0.2);
+}
+
+.section-title {
+  font-weight: 600;
   font-size: 1.1rem;
-  line-height: 1.8;
-  text-align: justify;
+  color: var(--accent-color);
+  margin-bottom: 0.75rem;
 }
 
+.education-entry {
+  border-left: 4px solid var(--accent-color);
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--entry-bg);
+  color: var(--text-color);
+  border-radius: 0.5rem;
+}
+
+.link {
+  color: var(--nav-hover-text);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+.about-section strong,
 .about-content strong {
   color: var(--nav-hover-text);
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .about-heading {
+    font-size: 2rem;
+  }
+
+  .about-section {
+    padding: 1rem;
+  }
 }

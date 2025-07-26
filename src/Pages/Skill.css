@@ -1,0 +1,140 @@
+:root {
+  --background: #f9fafb;
+  --text-color: #1a202c;
+  --card-bg: #ffffffcc;
+  --highlight-color: #2563eb;
+  --inner-card-bg: #f1f5f9cc;
+  --glass-blur: blur(12px);
+}
+
+[data-theme='dark'] {
+  --background: #0f172a;
+  --text-color: #e2e8f0;
+  --highlight-color: #60a5fa;
+  --inner-card-bg: #1a202ccc;
+  --glass-blur: blur(8px);
+}
+
+/* Root container - FULLSCREEN */
+.
+
+/* Inner wrapper */
+.skills-section {
+  width: 100%;
+  max-width: 1280px;
+  margin-top: 4rem;
+  background: var(--card-bg);
+  backdrop-filter: var(--glass-blur);
+  border-radius: 1.5rem;
+  padding: 2rem 3rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+.skills-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--highlight-color);
+  margin-bottom: 2rem;
+}
+
+/* Banner Image */
+.skills-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Grid for Skills */
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* Card */
+.skill-card {
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.5s ease forwards;
+  animation-delay: calc(0.1s * var(--i));
+  opacity: 0;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--highlight-color);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.skill-card p {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  text-align: center;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .skills-section {
+    padding: 1.5rem;
+  }
+
+  .skills-title {
+    font-size: 2rem;
+  }
+
+  .skill-card {
+    padding: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skills-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Scrollbar for desktop */
+@media (hover: hover) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--background);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--highlight-color);
+    border-radius: 10px;
+  }
+}

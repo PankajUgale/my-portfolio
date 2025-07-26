@@ -11,10 +11,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_xxx", // ✅ Replace with your real EmailJS Service ID
-        "template_xxx", // ✅ Replace with your real EmailJS Template ID
+        "service_abc123",       // ✅ Replace with your actual EmailJS Service ID
+        "template_xyz456",      // ✅ Replace with your EmailJS Template ID
         form.current,
-        "public_key_xxx" // ✅ Replace with your real Public Key (not private key)
+        "abc1DEFgHIjkLMn"       // ✅ Replace with your EmailJS Public Key
       )
       .then(
         (result) => {
@@ -22,8 +22,8 @@ const Contact = () => {
           form.current.reset();
         },
         (error) => {
-          console.error("FAILED...", error); // ✅ Log the actual error
-          setStatus("❌ Failed to send message. Please check console.");
+          console.error("FAILED...", error);
+          setStatus("❌ Failed to send message. Please try again later.");
         }
       );
   };
