@@ -1,18 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./Components/Navbar.jsx"; 
-//import Navbar from "./Components/navbar.jsx"; 
-//import Home from "./Pages/Home.jsx";
-import Home from "./Pages/home.jsx";
-//import About from "./Pages/About.jsx";
-import About from "./Pages/about.jsx";
-
-//import Projects from "./Pages/Projects.jsx";
-import Projects from "./Pages/projects.jsx";
-//import Skills from "./Pages/Skills.jsx";
-import Skills from "./Pages/skills.jsx";
-//import Contact from "./Pages/Contact.jsx";
-import Contact from "./Pages/contact.jsx";
+import Navbar from "./Components/Navbar.jsx";
+import Home from "./Pages/Home.jsx";
+import About from "./Pages/About.jsx";
+import Projects from "./Pages/Projects.jsx";
+import Skills from "./Pages/Skills.jsx";
+import Contact from "./Pages/Contact.jsx";
 
 import "./App.css";
 
