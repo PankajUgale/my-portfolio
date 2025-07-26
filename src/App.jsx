@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar.jsx"; 
 import Home from "./Pages/Home.jsx";
-import About from "./Pages/About.jsx";
+//import About from "./Pages/About.jsx";
+import About from "./Pages/about.jsx";
+
 import Projects from "./Pages/Projects.jsx";
 import Skills from "./Pages/Skills.jsx";
 import Contact from "./Pages/Contact.jsx";
