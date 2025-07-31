@@ -29,10 +29,10 @@ const Contact: React.FC = () => {
 
     emailjs
       .send(
-        'service_mail',     // 🔁 Replace with your EmailJS Service ID
-        'template_fxdpeuk',    // 🔁 Replace with your EmailJS Template ID
+        'service_mail',     
+        'template_fxdpeuk',    
         formData,
-        't742dAprNiMy2A5O5'      // 🔁 Replace with your EmailJS Public Key
+        't742dAprNiMy2A5O5'     
       )
       .then(() => {
         setStatus('success');
